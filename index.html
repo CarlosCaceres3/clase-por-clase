@@ -42,7 +42,6 @@
   .mono{font-family:ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;}
 
   .wrap{max-width:692px; margin:0 auto; padding:0 24px;}
-  .wide{max-width:920px; margin:0 auto; padding:0 24px;}
 
   /* ---------- hero ---------- */
   .hero{padding:96px 0 64px; text-align:center;}
@@ -177,82 +176,6 @@
   }
   .exception strong{color:var(--ink); font-weight:600;}
 
-  ul.plain{list-style:none; margin:22px 0 0; padding:0; display:flex; flex-direction:column; gap:14px;}
-  ul.plain li{
-    padding-left:22px;
-    position:relative;
-    color:var(--ink-soft);
-    font-size:1.02rem;
-  }
-  ul.plain li::before{
-    content:"–";
-    position:absolute; left:0; color:var(--accent); font-weight:650;
-  }
-  ul.plain li strong{color:var(--ink); font-weight:600;}
-
-  /* ---------- stat tiles ---------- */
-  .stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-    margin-top:32px;
-  }
-  @media (max-width:680px){ .stats{grid-template-columns:1fr 1fr;} }
-  .stat{
-    background:var(--surface);
-    border-radius:16px;
-    padding:24px 18px;
-    box-shadow:var(--shadow);
-    text-align:center;
-  }
-  .stat-num{
-    font-size:1.9rem;
-    font-weight:650;
-    letter-spacing:-0.02em;
-    font-variant-numeric:tabular-nums;
-  }
-  .stat-label{font-size:0.86rem; color:var(--ink-soft); margin-top:4px;}
-  .stat-total{
-    text-align:center;
-    margin-top:18px;
-    color:var(--ink-soft);
-    font-size:0.95rem;
-  }
-  .stat-total b{color:var(--ink); font-weight:650;}
-
-  /* ---------- tools ---------- */
-  .tools{margin-top:30px; display:flex; flex-direction:column;}
-  .tool{
-    display:flex; justify-content:space-between; align-items:baseline; gap:16px;
-    padding:16px 0;
-    border-top:1px solid var(--line);
-  }
-  .tool:last-child{border-bottom:1px solid var(--line);}
-  .tool-name{font-weight:600; font-size:1rem;}
-  .tool-desc{color:var(--ink-soft); font-size:0.92rem; margin-top:2px;}
-  .tag{font-size:0.8rem; color:var(--accent); font-weight:600; white-space:nowrap;}
-
-  /* ---------- rubric table ---------- */
-  .table-wrap{overflow-x:auto; margin-top:28px;}
-  table{width:100%; border-collapse:collapse; font-size:0.95rem;}
-  th, td{text-align:left; padding:14px 4px; border-bottom:1px solid var(--line); vertical-align:top;}
-  th{font-weight:600; color:var(--ink-soft); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.04em;}
-  td.score{font-weight:650; font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; color:var(--accent);}
-  th.score{text-align:right;}
-  tfoot td{border-bottom:none; font-weight:650; padding-top:16px;}
-  tfoot td.score{color:var(--ink); font-size:1.05rem;}
-
-  footer{
-    padding:56px 0 72px;
-    text-align:center;
-  }
-  footer p{
-    color:var(--ink-faint);
-    font-size:0.86rem;
-    max-width:480px;
-    margin:0 auto;
-    line-height:1.6;
-  }
 </style>
 </head>
 <body>
@@ -357,81 +280,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <p class="label">Si tu idea ya fue tomada</p>
-      <h2>Qué hacer</h2>
-      <ul class="plain">
-        <li>No la repitas: busca otro sustantivo del enunciado que aún no exista como clase.</li>
-        <li>Si no encuentras uno nuevo, <strong>profundiza</strong> en lo que ya hay — divide una clase con herencia, agrega una relación que falte, o completa atributos y métodos cortos.</li>
-        <li>Corregir en voz alta algo que dejó incompleto un compañero anterior está permitido, siempre que sea tu turno.</li>
-        <li>Si al final de las 19 rondas algo quedó sin modelar, se abre una ronda extra hasta cerrarlo.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="tint">
-    <div class="wide">
-      <p class="label">Sesión</p>
-      <h2>Cronograma</h2>
-      <div class="stats">
-        <div class="stat"><div class="stat-num mono">10′</div><div class="stat-label">Introducción</div></div>
-        <div class="stat"><div class="stat-num mono">75′</div><div class="stat-label">19 turnos</div></div>
-        <div class="stat"><div class="stat-num mono">20′</div><div class="stat-label">Revisión grupal</div></div>
-        <div class="stat"><div class="stat-num mono">5′</div><div class="stat-label">Cierre</div></div>
-      </div>
-      <p class="stat-total">Total: <b>≈ 1 h 50 min</b></p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <p class="label">Materiales</p>
-      <h2>Herramientas</h2>
-      <div class="tools">
-        <div class="tool"><div><div class="tool-name">draw.io / diagrams.net</div><div class="tool-desc">Gratis, paleta UML lista, guarda en Drive o local.</div></div><div class="tag">Recomendada</div></div>
-        <div class="tool"><div><div class="tool-name">Lucidchart</div><div class="tool-desc">Buena paleta UML; el plan gratis limita formas por documento.</div></div><div class="tag">Alternativa</div></div>
-        <div class="tool"><div><div class="tool-name">StarUML</div><div class="tool-desc">Escritorio, UML puro, sin cuenta ni conexión.</div></div><div class="tag">Alternativa</div></div>
-        <div class="tool"><div><div class="tool-name">Proyector + cronómetro</div><div class="tool-desc">Todo el curso debe ver cada turno y sentir el límite de tiempo.</div></div><div class="tag">Obligatorio</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tint">
-    <div class="wrap">
-      <p class="label">Evaluación</p>
-      <h2>Rúbrica individual</h2>
-      <p class="section-intro">Se evalúa el turno de cada estudiante, no el diagrama grupal completo.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Criterio</th><th class="score">Puntos</th></tr></thead>
-          <tbody>
-            <tr><td>Notación de la clase — nombre, atributos tipados, visibilidad, un método coherente.</td><td class="score">1.5</td></tr>
-            <tr><td>Relación y multiplicidad correctas con al menos una clase existente.</td><td class="score">1.5</td></tr>
-            <tr><td>Justificación oral con una frase del enunciado.</td><td class="score">1.0</td></tr>
-            <tr><td>Coherencia — no duplica ni contradice el diagrama ya construido.</td><td class="score">1.0</td></tr>
-          </tbody>
-          <tfoot><tr><td>Total</td><td class="score">5.0</td></tr></tfoot>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <p class="label">Al cierre</p>
-      <h2>Entregable</h2>
-      <ul class="plain">
-        <li>Diagrama final exportado en <strong>PNG o PDF</strong>, más el archivo editable.</li>
-        <li>Las 19 clases, todas conectadas entre sí — ninguna aislada — con multiplicidades marcadas.</li>
-        <li>Un estudiante designado lo sube al repositorio o carpeta del curso al cierre de la sesión.</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <p>Guía docente complementaria — con la lista de referencia de las 19 clases esperadas — entregada aparte, fuera de esta página, para no adelantar la solución a quienes la vean proyectada.</p>
-  </footer>
 
 </body>
 </html>
